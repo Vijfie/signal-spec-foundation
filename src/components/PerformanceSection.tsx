@@ -1,41 +1,43 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { TrendingUp, Shield, Clock } from 'lucide-react';
 
-// Sample performance data
+// 2024 Performance data
 const performanceData = [
-  { month: 'Jan 2023', strategy: 0, benchmark: 0 },
-  { month: 'Feb 2023', strategy: 2.1, benchmark: 1.2 },
-  { month: 'Mar 2023', strategy: 5.8, benchmark: 3.1 },
-  { month: 'Apr 2023', strategy: 3.2, benchmark: 2.8 },
-  { month: 'May 2023', strategy: 8.5, benchmark: 4.2 },
-  { month: 'Jun 2023', strategy: 12.3, benchmark: 6.1 },
-  { month: 'Jul 2023', strategy: 15.8, benchmark: 8.3 },
-  { month: 'Aug 2023', strategy: 11.2, benchmark: 7.1 },
-  { month: 'Sep 2023', strategy: 18.4, benchmark: 9.8 },
-  { month: 'Oct 2023', strategy: 22.1, benchmark: 11.2 },
-  { month: 'Nov 2023', strategy: 25.3, benchmark: 13.5 },
-  { month: 'Dec 2023', strategy: 28.7, benchmark: 15.1 },
+  { month: 'Januari', rendement: 1.95, winst: 195, fonds: 'TS' },
+  { month: 'Februari', rendement: 8.79, winst: 879, fonds: 'TS' },
+  { month: 'Maart', rendement: 4.73, winst: 473, fonds: 'TS' },
+  { month: 'April', rendement: 4.13, winst: 413, fonds: 'TS' },
+  { month: 'Mei', rendement: 5.99, winst: 599, fonds: 'TS' },
+  { month: 'Juni', rendement: 6.83, winst: 683, fonds: 'TS' },
+  { month: 'Juli', rendement: 1.68, winst: 168, fonds: 'TS' },
+  { month: 'Augustus', rendement: 3.14, winst: 314, fonds: 'TS' },
+  { month: 'September', rendement: -4.12, winst: -412, fonds: 'TS' },
+  { month: 'Oktober', rendement: 6.34, winst: 634, fonds: 'TS' },
+  { month: 'November', rendement: 24.71, winst: 2471, fonds: 'TS' },
+  { month: 'December', rendement: -3.18, winst: -318, fonds: 'TS' },
 ];
+
+const totalProfit = 6099;
 
 const PerformanceSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" id="rendement">
           <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
-            Resultaten spreken voor zich
+            Rendement 2024: €{totalProfit.toLocaleString('nl-NL')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Onze strategie is gebouwd op data en risicobeheer. Je volgt de signalen automatisch – 
-            volledige controle blijft bij jou.
+            Transparante maandresultaten van ons TS-fonds. Alle cijfers zijn geverifieerd 
+            en tonen de werkelijke prestaties van onze strategie.
           </p>
         </div>
 
         {/* Performance Chart */}
         <div className="bg-white rounded-3xl p-8 mb-12 shadow-card border border-border">
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold text-navy mb-2">Historisch Rendement</h3>
-            <p className="text-muted-foreground">Vergelijking met benchmark (AEX) over 12 maanden</p>
+            <h3 className="text-2xl font-semibold text-navy mb-2">TS-Fonds Prestaties 2024</h3>
+            <p className="text-muted-foreground">Maandelijkse rendementen en winst/verlies overzicht</p>
           </div>
           
           <div className="h-96">
@@ -44,8 +46,11 @@ const PerformanceSection = () => {
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
                 <XAxis 
                   dataKey="month" 
-                  tick={{ fontSize: 12 }}
+                  tick={{ fontSize: 11 }}
                   stroke="hsl(var(--muted-foreground))"
+                  angle={-45}
+                  textAnchor="end"
+                  height={60}
                 />
                 <YAxis 
                   tick={{ fontSize: 12 }}
@@ -59,27 +64,51 @@ const PerformanceSection = () => {
                     borderRadius: '12px',
                     boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
                   }}
+                  formatter={(value: number, name: string) => [
+                    `${value}%`,
+                    'Rendement'
+                  ]}
+                  labelFormatter={(label: string, payload: any[]) => {
+                    if (payload && payload[0]) {
+                      const data = payload[0].payload;
+                      return `${label} - €${data.winst > 0 ? '+' : ''}${data.winst.toLocaleString('nl-NL')}`;
+                    }
+                    return label;
+                  }}
                 />
-                <Legend />
                 <Line 
                   type="monotone" 
-                  dataKey="strategy" 
+                  dataKey="rendement" 
                   stroke="hsl(var(--tech-accent))" 
                   strokeWidth={3}
-                  name="Beursadvies Strategie"
-                  dot={{ fill: 'hsl(var(--tech-accent))', strokeWidth: 2, r: 4 }}
-                />
-                <Line 
-                  type="monotone" 
-                  dataKey="benchmark" 
-                  stroke="hsl(var(--muted-foreground))" 
-                  strokeWidth={2}
-                  strokeDasharray="5 5"
-                  name="AEX Benchmark"
-                  dot={{ fill: 'hsl(var(--muted-foreground))', strokeWidth: 2, r: 3 }}
+                  name="TS-Fonds Rendement"
+                  dot={(props: any) => {
+                    const isNegative = props.payload.rendement < 0;
+                    return (
+                      <circle
+                        cx={props.cx}
+                        cy={props.cy}
+                        r={5}
+                        fill={isNegative ? 'hsl(var(--warning))' : 'hsl(var(--success))'}
+                        stroke={isNegative ? 'hsl(var(--warning))' : 'hsl(var(--success))'}
+                        strokeWidth={2}
+                      />
+                    );
+                  }}
                 />
               </LineChart>
             </ResponsiveContainer>
+          </div>
+          
+          <div className="mt-6 p-4 bg-success/10 rounded-xl border border-success/20">
+            <div className="text-center">
+              <p className="text-lg font-semibold text-success">
+                Totaal rendement 2024: €{totalProfit.toLocaleString('nl-NL')}
+              </p>
+              <p className="text-sm text-muted-foreground mt-1">
+                Gebaseerd op een startkapitaal van €10.000
+              </p>
+            </div>
           </div>
           
           <p className="text-sm text-warning mt-4 text-center">
