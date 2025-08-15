@@ -79,7 +79,7 @@ const PerformanceSection = () => {
                 <Line 
                   type="monotone" 
                   dataKey="rendement" 
-                  stroke="hsl(var(--tech-accent))" 
+                  stroke="hsl(var(--gold))" 
                   strokeWidth={3}
                   name="TS-Fonds Rendement"
                   dot={(props: any) => {
@@ -89,8 +89,8 @@ const PerformanceSection = () => {
                         cx={props.cx}
                         cy={props.cy}
                         r={5}
-                        fill={isNegative ? 'hsl(var(--warning))' : 'hsl(var(--success))'}
-                        stroke={isNegative ? 'hsl(var(--warning))' : 'hsl(var(--success))'}
+                        fill={isNegative ? 'hsl(var(--navy))' : 'hsl(var(--gold))'}
+                        stroke={isNegative ? 'hsl(var(--navy))' : 'hsl(var(--gold))'}
                         strokeWidth={2}
                       />
                     );
