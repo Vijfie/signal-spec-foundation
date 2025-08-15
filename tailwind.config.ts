@@ -52,6 +52,31 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Beursadvies.nl custom colors
+				navy: {
+					DEFAULT: 'hsl(var(--navy))',
+					foreground: 'hsl(var(--navy-foreground))'
+				},
+				gold: {
+					DEFAULT: 'hsl(var(--gold))',
+					foreground: 'hsl(var(--gold-foreground))'
+				},
+				'cool-gray': {
+					DEFAULT: 'hsl(var(--cool-gray))',
+					foreground: 'hsl(var(--cool-gray-foreground))'
+				},
+				'tech-accent': {
+					DEFAULT: 'hsl(var(--tech-accent))',
+					foreground: 'hsl(var(--tech-accent-foreground))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

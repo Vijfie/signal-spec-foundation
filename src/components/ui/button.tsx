@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-medium tracking-wide ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -18,11 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Beursadvies.nl custom variants
+        hero: "bg-gold text-gold-foreground hover:bg-gold/90 shadow-lg hover:shadow-xl hover:shadow-gold/20 font-semibold",
+        cta: "bg-navy text-navy-foreground hover:bg-navy/90 shadow-md hover:shadow-lg font-semibold",
+        ghost_navy: "text-navy hover:bg-navy/10 border border-navy/20 hover:border-navy/40 font-medium",
+        minimal: "text-tech-accent hover:text-tech-accent/80 hover:bg-tech-accent/5 font-medium",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        default: "h-12 px-6 py-3",
+        sm: "h-9 rounded-lg px-4",
+        lg: "h-14 rounded-xl px-8 text-base",
+        xl: "h-16 rounded-xl px-10 text-lg",
         icon: "h-10 w-10",
       },
     },
