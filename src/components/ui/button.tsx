@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Beursadvies.nl custom variants
-        hero: "bg-gold text-gold-foreground hover:bg-gold/90 shadow-lg hover:shadow-xl hover:shadow-gold/20 font-semibold",
+        hero: "bg-success text-success-foreground hover:bg-success/90 shadow-lg hover:shadow-xl hover:shadow-success/20 font-semibold",
         cta: "bg-navy text-navy-foreground hover:bg-navy/90 shadow-md hover:shadow-lg font-semibold",
         ghost_navy: "text-navy hover:bg-navy/10 border border-navy/20 hover:border-navy/40 font-medium",
         minimal: "text-tech-accent hover:text-tech-accent/80 hover:bg-tech-accent/5 font-medium",
