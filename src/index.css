@@ -8,59 +8,63 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Beursadvies.nl Design System */
-    /* Navy (primary brand) */
-    --navy: 221 42% 16%;
+    /* Beursadvies.nl Design System - Updated Colors */
+    /* Donkerblauw (Trust & Autoriteit) */
+    --navy: 211 71% 15%;
     --navy-foreground: 0 0% 100%;
     
-    /* Gold (accent/CTA) */
-    --gold: 36 38% 59%;
-    --gold-foreground: 221 42% 16%;
+    /* Goud (Premium & Urgentie) */
+    --gold: 51 89% 50%;
+    --gold-foreground: 211 71% 15%;
     
-    /* Cool Gray backgrounds */
-    --cool-gray: 220 13% 91%;
-    --cool-gray-foreground: 221 42% 16%;
+    /* Lichtgrijs (Neutral Background) */
+    --cool-gray: 225 25% 97%;
+    --cool-gray-foreground: 211 71% 15%;
     
-    /* Tech Accent (charts/links) */
-    --tech-accent: 200 84% 57%;
+    /* Tech Aqua (Innovatie & AI) */
+    --tech-accent: 190 100% 42%;
     --tech-accent-foreground: 0 0% 100%;
     
-    /* Success (growth) */
-    --success: 150 37% 31%;
+    /* Groen (Groei & Conversie) */
+    --success: 145 63% 42%;
     --success-foreground: 0 0% 100%;
     
     /* Warning (risk) */
     --warning: 0 59% 56%;
     --warning-foreground: 0 0% 100%;
     
+    /* Platina Grijs (Secundaire tekst) */
+    --platinum-gray: 204 8% 76%;
+    --platinum-gray-foreground: 211 71% 15%;
+    
     /* Semantic tokens */
     --background: 0 0% 100%;
-    --foreground: 0 0% 20%;
+    --foreground: 211 71% 15%;
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card-foreground: 211 71% 15%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 211 71% 15%;
     
-    --primary: 221 42% 16%;
+    --primary: 211 71% 15%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 220 13% 91%;
-    --secondary-foreground: 221 42% 16%;
+    --secondary: 225 25% 97%;
+    --secondary-foreground: 211 71% 15%;
     
-    --muted: 220 13% 91%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 225 25% 97%;
+    --muted-foreground: 204 8% 76%;
     
-    --accent: 36 38% 59%;
-    --accent-foreground: 221 42% 16%;
+    --accent: 51 89% 50%;
+    --accent-foreground: 211 71% 15%;
     
     --destructive: 0 59% 56%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 36 38% 59%;
+    --border: 225 25% 97%;
+    --input: 225 25% 97%;
+    --ring: 51 89% 50%;
     
     /* Custom design tokens */
     --gradient-hero: linear-gradient(135deg, hsl(var(--navy)), hsl(var(--navy) / 0.9));

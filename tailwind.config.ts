@@ -65,6 +65,10 @@ export default {
 					DEFAULT: 'hsl(var(--cool-gray))',
 					foreground: 'hsl(var(--cool-gray-foreground))'
 				},
+				'platinum-gray': {
+					DEFAULT: 'hsl(var(--platinum-gray))',
+					foreground: 'hsl(var(--platinum-gray-foreground))'
+				},
 				'tech-accent': {
 					DEFAULT: 'hsl(var(--tech-accent))',
 					foreground: 'hsl(var(--tech-accent-foreground))'
