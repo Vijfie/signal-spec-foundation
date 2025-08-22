@@ -66,7 +66,7 @@ const Pricing = () => {
                 <span className="text-5xl font-bold text-navy">€1.279</span>
                 <span className="text-muted-foreground">/2 jaar</span>
               </div>
-              <div className="bg-gold/10 text-gold px-3 py-1 rounded-full text-sm font-semibold mb-2 inline-block">
+              <div className="bg-success/10 text-success px-3 py-1 rounded-full text-sm font-semibold mb-2 inline-block">
                 Bespaar €319 (-20%)
               </div>
               <p className="text-muted-foreground">Beste waarde – langetermijn strategie</p>

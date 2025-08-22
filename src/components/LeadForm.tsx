@@ -57,8 +57,8 @@ const LeadForm = () => {
           {/* Right Form */}
           <div className="bg-white rounded-3xl p-8 shadow-hover border border-border">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
-                <Download className="w-6 h-6 text-gold" />
+              <div className="w-12 h-12 bg-success/10 rounded-xl flex items-center justify-center">
+                <Download className="w-6 h-6 text-success" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-navy">Gratis brochure</h3>

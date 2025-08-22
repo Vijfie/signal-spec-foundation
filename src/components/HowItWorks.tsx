@@ -12,7 +12,7 @@ const steps = [
     icon: Zap,
     title: "Activeer automatische uitvoering",
     description: "Onze signalen worden realtime toegepast.",
-    color: "gold"
+    color: "success"
   },
   {
     icon: BarChart3,
@@ -57,12 +57,12 @@ const HowItWorks = () => {
                   
                   <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center ${
                     step.color === 'tech-accent' ? 'bg-tech-accent/10' :
-                    step.color === 'gold' ? 'bg-gold/10' :
+                    step.color === 'success' ? 'bg-success/10' :
                     'bg-success/10'
                   }`}>
                     <IconComponent className={`w-10 h-10 ${
                       step.color === 'tech-accent' ? 'text-tech-accent' :
-                      step.color === 'gold' ? 'text-gold' :
+                      step.color === 'success' ? 'text-success' :
                       'text-success'
                     }`} />
                   </div>

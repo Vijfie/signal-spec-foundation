@@ -57,7 +57,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-navy hover:text-gold hover:bg-navy/5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold"
+              className="inline-flex items-center justify-center p-2 rounded-md text-navy hover:text-success hover:bg-navy/5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-success"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -72,7 +72,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-navy hover:text-gold hover:bg-navy/5 transition-colors"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-navy hover:text-success hover:bg-navy/5 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

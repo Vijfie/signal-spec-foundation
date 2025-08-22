@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative min-h-screen bg-gradient-to-br from-navy via-navy/95 to-navy/90 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-50">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gold/5 to-tech-accent/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-success/5 to-tech-accent/5"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-16">
@@ -28,22 +28,22 @@ const Hero = () => {
             {/* USP Features */}
             <div className="space-y-4">
               <div className="flex items-center gap-4 text-white/90">
-                <div className="flex-shrink-0 w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center">
-                  <Zap className="w-4 h-4 text-gold" />
+                <div className="flex-shrink-0 w-6 h-6 bg-success/20 rounded-full flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-success" />
                 </div>
                 <span className="text-lg font-medium">Automatische uitvoering | Signalen op je eigen rekening</span>
               </div>
               
               <div className="flex items-center gap-4 text-white/90">
-                <div className="flex-shrink-0 w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center">
-                  <Shield className="w-4 h-4 text-gold" />
+                <div className="flex-shrink-0 w-6 h-6 bg-success/20 rounded-full flex items-center justify-center">
+                  <Shield className="w-4 h-4 text-success" />
                 </div>
                 <span className="text-lg font-medium">Transparant | Inzicht in posities & rendement</span>
               </div>
               
               <div className="flex items-center gap-4 text-white/90">
-                <div className="flex-shrink-0 w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 text-gold" />
+                <div className="flex-shrink-0 w-6 h-6 bg-success/20 rounded-full flex items-center justify-center">
+                  <CheckCircle className="w-4 h-4 text-success" />
                 </div>
                 <span className="text-lg font-medium">Eenvoudig | Start in 10 minuten</span>
               </div>
@@ -77,7 +77,7 @@ const Hero = () => {
           {/* Right Content - Dashboard Mockup */}
           <div className="relative">
             <div className="relative mx-auto max-w-lg lg:max-w-none">
-              <div className="absolute -inset-4 bg-gradient-to-r from-gold/20 to-tech-accent/20 rounded-3xl blur-2xl opacity-50"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-success/20 to-tech-accent/20 rounded-3xl blur-2xl opacity-50"></div>
               <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-6 border border-white/20">
                 <img 
                   src={dashboardMockup}
