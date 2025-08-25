@@ -27,7 +27,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-navy">Beursadvies.nl</h1>
+            <img 
+              src="/lovable-uploads/4090bf78-43b3-461e-b80a-2e714a4e4753.png" 
+              alt="Beursadvies.nl Logo" 
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Menu */}
