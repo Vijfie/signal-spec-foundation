@@ -28,7 +28,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/4090bf78-43b3-461e-b80a-2e714a4e4753.png" 
+              src="/lovable-uploads/eee570d0-7bf9-4842-be08-62fb8ceac436.png" 
               alt="Beursadvies.nl Logo" 
               className="h-8 w-auto"
             />
