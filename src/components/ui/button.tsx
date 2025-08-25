@@ -18,11 +18,13 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Beursadvies.nl custom variants
-        hero: "bg-success text-success-foreground hover:bg-success/90 shadow-lg hover:shadow-xl hover:shadow-success/20 font-semibold",
-        cta: "bg-navy text-navy-foreground hover:bg-navy/90 shadow-md hover:shadow-lg font-semibold",
-        ghost_navy: "text-navy hover:bg-navy/10 border border-navy/20 hover:border-navy/40 font-medium",
-        minimal: "text-tech-accent hover:text-tech-accent/80 hover:bg-tech-accent/5 font-medium",
+        // Beursadvies.nl CTA variants - ALTIJD ORANJE volgens briefing
+        hero: "bg-primary-orange text-primary-white hover:bg-orange-hover shadow-cta hover:shadow-cta-hover font-semibold transition-all duration-200 hover:-translate-y-0.5",
+        cta: "bg-primary-orange text-primary-white hover:bg-orange-hover shadow-cta hover:shadow-cta-hover font-semibold transition-all duration-200 hover:-translate-y-0.5",
+        // Navy variant voor trust signals
+        navy: "bg-primary-navy text-primary-white hover:bg-navy-hover shadow-md hover:shadow-lg font-semibold",
+        ghost_navy: "text-primary-navy hover:bg-primary-navy/10 border border-primary-navy/20 hover:border-primary-navy/40 font-medium",
+        minimal: "text-text-light hover:text-text-dark hover:bg-bg-light font-medium",
       },
       size: {
         default: "h-12 px-6 py-3",

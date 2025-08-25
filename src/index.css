@@ -2,120 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Beursadvies.nl Design System - Conversie-geoptimaliseerd kleurenpalet
+All colors MUST be HSL format according to the developer briefing.
 */
 
 @layer base {
   :root {
-    /* Beursadvies.nl Design System - Updated Colors */
-    /* Donkerblauw (Trust & Autoriteit) */
-    --navy: 211 71% 15%;
-    --navy-foreground: 0 0% 100%;
+    /* PRIMARY COLORS - Hoofdkleuren voor conversie */
+    --primary-navy: 222 47% 11%;         /* #0f172a - Headers, navigatie, hero */
+    --primary-orange: 41 96% 48%;        /* #f59e0b - CTA buttons, accenten */
+    --primary-white: 0 0% 100%;          /* #ffffff - Content backgrounds */
     
-    /* Goud (Premium & Urgentie) */
-    --gold: 51 89% 50%;
-    --gold-foreground: 211 71% 15%;
+    /* SUPPORTING COLORS - Ondersteunende kleuren */
+    --success-green: 159 61% 20%;        /* #065f46 - Alleen positieve cijfers */
+    --text-dark: 221 39% 11%;            /* #1e293b - Body tekst */
+    --text-light: 215 20% 65%;           /* #64748b - Subtekst, labels */
+    --border-light: 214 32% 91%;         /* #e2e8f0 - Borders, dividers */
+    --bg-light: 213 31% 97%;             /* #f8fafc - Alternatieve backgrounds */
     
-    /* Lichtgrijs (Neutral Background) */
-    --cool-gray: 225 25% 97%;
-    --cool-gray-foreground: 211 71% 15%;
+    /* HOVER STATES - Voor interactie feedback */
+    --orange-hover: 32 95% 44%;          /* #d97706 - CTA hover */
+    --navy-hover: 215 25% 27%;           /* #1e293b - Navy hover */
+
+    /* SEMANTIC TOKENS - Shadcn/UI compatibiliteit */
+    --background: var(--primary-white);
+    --foreground: var(--text-dark);
     
-    /* Tech Aqua (Innovatie & AI) */
-    --tech-accent: 190 100% 42%;
-    --tech-accent-foreground: 0 0% 100%;
+    --card: var(--primary-white);
+    --card-foreground: var(--text-dark);
     
-    /* Groen (Groei & Conversie) */
-    --success: 145 63% 42%;
-    --success-foreground: 0 0% 100%;
+    --popover: var(--primary-white);
+    --popover-foreground: var(--text-dark);
     
-    /* Warning (risk) */
-    --warning: 0 59% 56%;
-    --warning-foreground: 0 0% 100%;
+    --primary: var(--primary-navy);
+    --primary-foreground: var(--primary-white);
     
-    /* Platina Grijs (Secundaire tekst) */
-    --platinum-gray: 204 8% 76%;
-    --platinum-gray-foreground: 211 71% 15%;
+    --secondary: var(--success-green);
+    --secondary-foreground: var(--primary-white);
     
-    /* Semantic tokens */
-    --background: 0 0% 100%;
-    --foreground: 211 71% 15%;
+    --muted: var(--bg-light);
+    --muted-foreground: var(--text-light);
     
-    --card: 0 0% 100%;
-    --card-foreground: 211 71% 15%;
-    
-    --popover: 0 0% 100%;
-    --popover-foreground: 211 71% 15%;
-    
-    --primary: 211 71% 15%;
-    --primary-foreground: 0 0% 100%;
-    
-    --secondary: 145 63% 42%;
-    --secondary-foreground: 0 0% 100%;
-    
-    --muted: 225 25% 97%;
-    --muted-foreground: 204 8% 76%;
-    
-    --accent: 51 89% 50%;
-    --accent-foreground: 211 71% 15%;
+    --accent: var(--primary-orange);
+    --accent-foreground: var(--primary-white);
     
     --destructive: 0 59% 56%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: var(--primary-white);
     
-    --border: 225 25% 97%;
-    --input: 225 25% 97%;
-    --ring: 51 89% 50%;
+    --border: var(--border-light);
+    --input: var(--border-light);
+    --ring: var(--primary-orange);
     
-    /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--navy)), hsl(var(--navy) / 0.9));
-    --shadow-card: 0 10px 30px hsl(var(--navy) / 0.08);
-    --shadow-hover: 0 20px 40px hsl(var(--navy) / 0.12);
-    --shadow-glow: 0 0 40px hsl(var(--gold) / 0.3);
+    /* CUSTOM DESIGN TOKENS - Voor speciale effecten */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-navy)), hsl(var(--primary-navy) / 0.9));
+    --shadow-card: 0 10px 30px hsl(var(--primary-navy) / 0.08);
+    --shadow-hover: 0 20px 40px hsl(var(--primary-navy) / 0.12);
+    --shadow-cta: 0 4px 14px hsl(var(--primary-orange) / 0.3);
+    --shadow-cta-hover: 0 8px 25px hsl(var(--primary-orange) / 0.4);
     
-    --radius: 1rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* COMPATIBILITY - Voor bestaande componenten */
+    --navy: var(--primary-navy);
+    --navy-foreground: var(--primary-white);
+    --success: var(--success-green);
+    --success-foreground: var(--primary-white);
+    --warning: 0 59% 56%;
+    --warning-foreground: var(--primary-white);
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* SIDEBAR TOKENS */
+    --sidebar-background: var(--primary-white);
+    --sidebar-foreground: var(--text-dark);
+    --sidebar-primary: var(--primary-navy);
+    --sidebar-primary-foreground: var(--primary-white);
+    --sidebar-accent: var(--bg-light);
+    --sidebar-accent-foreground: var(--text-dark);
+    --sidebar-border: var(--border-light);
+    --sidebar-ring: var(--primary-orange);
   }
 
   .dark {
+    /* Dark mode blijft identiek voor nu - focus op light mode conversie */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -136,6 +119,42 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    color: hsl(var(--text-dark));
+  }
+  
+  /* TYPOGRAPHY HIERARCHY - Volgens briefing */
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--primary-navy));
+  }
+  
+  .subtitle, .label, .meta-text {
+    color: hsl(var(--text-light));
+  }
+  
+  /* CTA BUTTON CRITICAL STYLES - Altijd oranje */
+  .cta-button, .btn-primary, .start-button {
+    background-color: hsl(var(--primary-orange));
+    color: hsl(var(--primary-white));
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-cta);
+  }
+  
+  .cta-button:hover, .btn-primary:hover, .start-button:hover {
+    background-color: hsl(var(--orange-hover));
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-cta-hover);
+  }
+  
+  /* POSITIVE RESULTS - Alleen groen voor echte positieve cijfers */
+  .profit, .positive-result, .success-metric {
+    color: hsl(var(--success-green));
+    font-weight: 600;
+  }
+  
+  /* FOCUS STATES - Accessibility compliance */
+  .cta-button:focus-visible {
+    outline: 3px solid hsl(var(--primary-orange) / 0.5);
+    outline-offset: 2px;
   }
 }

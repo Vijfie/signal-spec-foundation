@@ -52,26 +52,42 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Beursadvies.nl custom colors
+				
+				/* BEURSADVIES.NL CONVERSIE-GEOPTIMALISEERDE KLEUREN */
+				/* Volgens developer briefing - exact implementatie */
+				
+				// Primary colors - hoofdkleuren voor conversie
+				'primary-navy': {
+					DEFAULT: 'hsl(var(--primary-navy))',
+					foreground: 'hsl(var(--primary-white))'
+				},
+				'primary-orange': {
+					DEFAULT: 'hsl(var(--primary-orange))',
+					foreground: 'hsl(var(--primary-white))'
+				},
+				'primary-white': {
+					DEFAULT: 'hsl(var(--primary-white))',
+					foreground: 'hsl(var(--text-dark))'
+				},
+				
+				// Supporting colors - ondersteunende kleuren
+				'success-green': {
+					DEFAULT: 'hsl(var(--success-green))',
+					foreground: 'hsl(var(--primary-white))'
+				},
+				'text-dark': 'hsl(var(--text-dark))',
+				'text-light': 'hsl(var(--text-light))',
+				'border-light': 'hsl(var(--border-light))',
+				'bg-light': 'hsl(var(--bg-light))',
+				
+				// Hover states - voor interactie feedback
+				'orange-hover': 'hsl(var(--orange-hover))',
+				'navy-hover': 'hsl(var(--navy-hover))',
+				
+				// Compatibility - voor bestaande componenten
 				navy: {
 					DEFAULT: 'hsl(var(--navy))',
 					foreground: 'hsl(var(--navy-foreground))'
-				},
-				gold: {
-					DEFAULT: 'hsl(var(--gold))',
-					foreground: 'hsl(var(--gold-foreground))'
-				},
-				'cool-gray': {
-					DEFAULT: 'hsl(var(--cool-gray))',
-					foreground: 'hsl(var(--cool-gray-foreground))'
-				},
-				'platinum-gray': {
-					DEFAULT: 'hsl(var(--platinum-gray))',
-					foreground: 'hsl(var(--platinum-gray-foreground))'
-				},
-				'tech-accent': {
-					DEFAULT: 'hsl(var(--tech-accent))',
-					foreground: 'hsl(var(--tech-accent-foreground))'
 				},
 				success: {
 					DEFAULT: 'hsl(var(--success))',
@@ -81,6 +97,7 @@ export default {
 					DEFAULT: 'hsl(var(--warning))',
 					foreground: 'hsl(var(--warning-foreground))'
 				},
+				
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -96,6 +113,12 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			boxShadow: {
+				'cta': 'var(--shadow-cta)',
+				'cta-hover': 'var(--shadow-cta-hover)',
+				'card': 'var(--shadow-card)',
+				'hover': 'var(--shadow-hover)'
 			},
 			keyframes: {
 				'accordion-down': {
