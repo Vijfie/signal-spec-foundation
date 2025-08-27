@@ -28,8 +28,8 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/eee570d0-7bf9-4842-be08-62fb8ceac436.png" 
-              alt="Beursadvies.nl Logo" 
+              src="/lovable-uploads/82dbed31-48d3-45da-ae74-04cb2d3ad617.png" 
+              alt="Beursadvies Logo" 
               className="h-8 w-auto"
             />
           </div>

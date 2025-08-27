@@ -2,27 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Beursadvies.nl Design System - Conversie-geoptimaliseerd kleurenpalet
+/* Beursadvies Design System - Nieuwe kleurenpalet
 All colors MUST be HSL format according to the developer briefing.
 */
 
 @layer base {
   :root {
-    /* PRIMARY COLORS - Hoofdkleuren voor conversie */
-    --primary-navy: 222 47% 11%;         /* #0f172a - Headers, navigatie, hero */
-    --primary-orange: 41 96% 48%;        /* #f59e0b - CTA buttons, accenten */
-    --primary-white: 0 0% 100%;          /* #ffffff - Content backgrounds */
+    /* PRIMARY COLORS - Hoofdkleuren voor merk */
+    --primary-navy: 210 75% 16%;         /* #0A2540 - Headers, navigatie, hero */
+    --primary-gold: 42 49% 58%;          /* #CDA95E - CTA buttons, premium accenten */
+    --primary-white: 0 0% 100%;          /* #FFFFFF - Content backgrounds */
     
     /* SUPPORTING COLORS - Ondersteunende kleuren */
-    --success-green: 159 61% 20%;        /* #065f46 - Alleen positieve cijfers */
-    --text-dark: 221 39% 11%;            /* #1e293b - Body tekst */
+    --growth-green: 153 61% 42%;         /* #27AE60 - Positieve cijfers, groei */
+    --tech-blue: 198 73% 58%;            /* #42B4E6 - Links, grafieken, hover */
+    --text-dark: 0 0% 20%;               /* #333333 - Body tekst */
     --text-light: 215 20% 65%;           /* #64748b - Subtekst, labels */
     --border-light: 214 32% 91%;         /* #e2e8f0 - Borders, dividers */
-    --bg-light: 213 31% 97%;             /* #f8fafc - Alternatieve backgrounds */
+    --bg-cool-gray: 220 16% 89%;         /* #E3E7ED - Sectie backgrounds */
+    
+    /* STATUS COLORS - Feedback kleuren */
+    --positive-green: 158 33% 33%;       /* #3E7158 - Success messages */
+    --warning-red: 353 48% 52%;          /* #C04B4B - Fouten, disclaimers */
     
     /* HOVER STATES - Voor interactie feedback */
-    --orange-hover: 32 95% 44%;          /* #d97706 - CTA hover */
-    --navy-hover: 215 25% 27%;           /* #1e293b - Navy hover */
+    --gold-hover: 42 49% 52%;            /* Donkere gold voor hover */
+    --navy-hover: 210 75% 20%;           /* Lichtere navy voor hover */
 
     /* SEMANTIC TOKENS - Shadcn/UI compatibiliteit */
     --background: var(--primary-white);
@@ -37,37 +42,37 @@ All colors MUST be HSL format according to the developer briefing.
     --primary: var(--primary-navy);
     --primary-foreground: var(--primary-white);
     
-    --secondary: var(--success-green);
+    --secondary: var(--growth-green);
     --secondary-foreground: var(--primary-white);
     
-    --muted: var(--bg-light);
+    --muted: var(--bg-cool-gray);
     --muted-foreground: var(--text-light);
     
-    --accent: var(--primary-orange);
+    --accent: var(--primary-gold);
     --accent-foreground: var(--primary-white);
     
-    --destructive: 0 59% 56%;
+    --destructive: var(--warning-red);
     --destructive-foreground: var(--primary-white);
     
     --border: var(--border-light);
     --input: var(--border-light);
-    --ring: var(--primary-orange);
+    --ring: var(--primary-gold);
     
     /* CUSTOM DESIGN TOKENS - Voor speciale effecten */
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary-navy)), hsl(var(--primary-navy) / 0.9));
     --shadow-card: 0 10px 30px hsl(var(--primary-navy) / 0.08);
     --shadow-hover: 0 20px 40px hsl(var(--primary-navy) / 0.12);
-    --shadow-cta: 0 4px 14px hsl(var(--primary-orange) / 0.3);
-    --shadow-cta-hover: 0 8px 25px hsl(var(--primary-orange) / 0.4);
+    --shadow-cta: 0 4px 14px hsl(var(--primary-gold) / 0.3);
+    --shadow-cta-hover: 0 8px 25px hsl(var(--primary-gold) / 0.4);
     
     --radius: 0.75rem;
 
     /* COMPATIBILITY - Voor bestaande componenten */
     --navy: var(--primary-navy);
     --navy-foreground: var(--primary-white);
-    --success: var(--success-green);
+    --success: var(--growth-green);
     --success-foreground: var(--primary-white);
-    --warning: 0 59% 56%;
+    --warning: var(--warning-red);
     --warning-foreground: var(--primary-white);
 
     /* SIDEBAR TOKENS */
@@ -132,29 +137,29 @@ All colors MUST be HSL format according to the developer briefing.
     color: hsl(var(--text-light));
   }
   
-  /* CTA BUTTON CRITICAL STYLES - Altijd oranje */
+  /* CTA BUTTON CRITICAL STYLES - Altijd goud */
   .cta-button, .btn-primary, .start-button {
-    background-color: hsl(var(--primary-orange));
+    background-color: hsl(var(--primary-gold));
     color: hsl(var(--primary-white));
     transition: all 0.2s ease;
     box-shadow: var(--shadow-cta);
   }
   
   .cta-button:hover, .btn-primary:hover, .start-button:hover {
-    background-color: hsl(var(--orange-hover));
+    background-color: hsl(var(--gold-hover));
     transform: translateY(-1px);
     box-shadow: var(--shadow-cta-hover);
   }
   
-  /* POSITIVE RESULTS - Alleen groen voor echte positieve cijfers */
+  /* POSITIVE RESULTS - Groen voor echte positieve cijfers */
   .profit, .positive-result, .success-metric {
-    color: hsl(var(--success-green));
+    color: hsl(var(--growth-green));
     font-weight: 600;
   }
   
   /* FOCUS STATES - Accessibility compliance */
   .cta-button:focus-visible {
-    outline: 3px solid hsl(var(--primary-orange) / 0.5);
+    outline: 3px solid hsl(var(--primary-gold) / 0.5);
     outline-offset: 2px;
   }
 }

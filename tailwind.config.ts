@@ -53,16 +53,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				
-				/* BEURSADVIES.NL CONVERSIE-GEOPTIMALISEERDE KLEUREN */
-				/* Volgens developer briefing - exact implementatie */
+				/* BEURSADVIES NIEUWE KLEURENPALET */
+				/* Volgens nieuwe developer briefing - exact implementatie */
 				
-				// Primary colors - hoofdkleuren voor conversie
+				// Primary colors - hoofdkleuren voor merk
 				'primary-navy': {
 					DEFAULT: 'hsl(var(--primary-navy))',
 					foreground: 'hsl(var(--primary-white))'
 				},
-				'primary-orange': {
-					DEFAULT: 'hsl(var(--primary-orange))',
+				'primary-gold': {
+					DEFAULT: 'hsl(var(--primary-gold))',
 					foreground: 'hsl(var(--primary-white))'
 				},
 				'primary-white': {
@@ -71,17 +71,25 @@ export default {
 				},
 				
 				// Supporting colors - ondersteunende kleuren
-				'success-green': {
-					DEFAULT: 'hsl(var(--success-green))',
+				'growth-green': {
+					DEFAULT: 'hsl(var(--growth-green))',
+					foreground: 'hsl(var(--primary-white))'
+				},
+				'tech-blue': {
+					DEFAULT: 'hsl(var(--tech-blue))',
 					foreground: 'hsl(var(--primary-white))'
 				},
 				'text-dark': 'hsl(var(--text-dark))',
 				'text-light': 'hsl(var(--text-light))',
 				'border-light': 'hsl(var(--border-light))',
-				'bg-light': 'hsl(var(--bg-light))',
+				'bg-cool-gray': 'hsl(var(--bg-cool-gray))',
+				
+				// Status colors - feedback kleuren
+				'positive-green': 'hsl(var(--positive-green))',
+				'warning-red': 'hsl(var(--warning-red))',
 				
 				// Hover states - voor interactie feedback
-				'orange-hover': 'hsl(var(--orange-hover))',
+				'gold-hover': 'hsl(var(--gold-hover))',
 				'navy-hover': 'hsl(var(--navy-hover))',
 				
 				// Compatibility - voor bestaande componenten
