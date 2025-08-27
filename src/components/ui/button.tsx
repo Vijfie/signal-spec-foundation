@@ -18,9 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Beursadvies CTA variants - ALTIJD GOUD volgens nieuwe briefing
-        hero: "bg-primary-gold text-primary-white hover:bg-gold-hover shadow-cta hover:shadow-cta-hover font-semibold transition-all duration-200 hover:-translate-y-0.5",
-        cta: "bg-primary-gold text-primary-white hover:bg-gold-hover shadow-cta hover:shadow-cta-hover font-semibold transition-all duration-200 hover:-translate-y-0.5",
+        // Beursadvies CTA variants - ALTIJD GROEN volgens nieuwe briefing
+        hero: "bg-primary-green text-primary-white hover:bg-green-hover shadow-cta hover:shadow-cta-hover font-semibold transition-all duration-200 hover:-translate-y-0.5",
+        cta: "bg-primary-green text-primary-white hover:bg-green-hover shadow-cta hover:shadow-cta-hover font-semibold transition-all duration-200 hover:-translate-y-0.5",
         // Navy variant voor trust signals
         navy: "bg-primary-navy text-primary-white hover:bg-navy-hover shadow-md hover:shadow-lg font-semibold",
         ghost_navy: "text-primary-navy hover:bg-primary-navy/10 border border-primary-navy/20 hover:border-primary-navy/40 font-medium",

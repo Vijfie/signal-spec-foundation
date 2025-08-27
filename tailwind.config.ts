@@ -61,8 +61,8 @@ export default {
 					DEFAULT: 'hsl(var(--primary-navy))',
 					foreground: 'hsl(var(--primary-white))'
 				},
-				'primary-gold': {
-					DEFAULT: 'hsl(var(--primary-gold))',
+				'primary-green': {
+					DEFAULT: 'hsl(var(--primary-green))',
 					foreground: 'hsl(var(--primary-white))'
 				},
 				'primary-white': {
@@ -89,7 +89,7 @@ export default {
 				'warning-red': 'hsl(var(--warning-red))',
 				
 				// Hover states - voor interactie feedback
-				'gold-hover': 'hsl(var(--gold-hover))',
+				'green-hover': 'hsl(var(--green-hover))',
 				'navy-hover': 'hsl(var(--navy-hover))',
 				
 				// Compatibility - voor bestaande componenten
