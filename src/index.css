@@ -83,7 +83,7 @@ All colors MUST be HSL format according to the developer briefing.
     --sidebar-accent: var(--bg-light);
     --sidebar-accent-foreground: var(--text-dark);
     --sidebar-border: var(--border-light);
-    --sidebar-ring: var(--primary-orange);
+    --sidebar-ring: var(--primary-green);
   }
 
   .dark {
